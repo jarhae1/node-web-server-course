@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+ <style>
+ img.img-responsive {
+    width: 100%;
+    height: 350px;
+}
+</style>
+  <title>{{pageTitle}}</title>
+</head>
+<body>
+
+<div style="background-image: url('{{headerImg}}'); background-size:cover; margin-bottom:30px; color:white; padding:40px;" class="hero">
+  {{> header}}
+  <p>{{screamIt welcomeMessage}}</p>
+</div>
+
+<div class="columns col-oneline">
+        <div class="card col-5 col-mx-auto">
+        <div class="card-image">
+          <img src="{{hackerGif}}" class="img-responsive" style="width:100%;">
+        </div>
+        <div class="card-header">
+          <div class="card-title h5">Hello Header</div>
+          <div class="card-subtitle text-gray">Hello Subheader</div>
+        </div>
+        <div class="card-body">
+          <p>Hello, welcome to my Node template in hbs. My name is {{firstName}} {{lastName}}.
+              I have been learning node. It has been a fun adventure. In my free time I really like <tbody>
+              go {{hobbies.[0]}} and {{hobbies.[1]}} on the weekends. I also really enjoy {{hobbies.[2]}} during the week.
+              I am excited to see how this renders on the page. Shall we see.
+              </p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" href="/about">About Page</a>
+            <button class="btn btn-primary">Go Here</button>
+              <button class="btn btn-primary">Whats Here</button>
+        </div>
+        </div>
+
+        <div class="card col-7 col-mx-auto">
+        <div class="card-image">
+        <img src="{{profilePic}}" class="img-responsive">
+        </div>
+        <div class="card-header">
+        <div class="card-title h5">Hello Header</div>
+        <div class="card-subtitle text-gray">Hello Subheader</div>
+        </div>
+        <div class="card-body">
+        <p>Hello, welcome to my Node template in hbs. My name is {{firstName}} {{lastName}}.
+            I have been learning node. It has been a fun adventure. In my free time I really like <tbody>
+            go {{hobbies.[0]}} and {{hobbies.[1]}} on the weekends. I also really enjoy {{hobbies.[2]}} during the week.
+            I am excited to see how this renders on the page. Shall we see.
+            </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" href="/about">About Page</a>
+          <button class="btn btn-primary">Go Here</button>
+            <button class="btn btn-primary">Whats Here</button>
+        </div>
+        </div>
+</div>
+
+{{> footer}}
+</body>
+</html>
