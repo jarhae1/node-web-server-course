@@ -32,9 +32,9 @@ app.use((req, res, next)=>{
 
 //If you don't use next, the browser wont
 //continue so you can use something like below to force to maintenance page
-    app.use((req, res, next)=>{
-    res.render('maintenance.hbs')
-    });
+    // app.use((req, res, next)=>{
+    // res.render('maintenance.hbs')
+    // });
 
 
 //Setting up middlewear. This allows you configure how your express app works
