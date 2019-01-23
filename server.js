@@ -3,6 +3,7 @@ const express = require('express');
 // a template view engine that works with express/see handlebars
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 //need to make a new express app. This is set to the return results
 //for calling express as a function. In order to create an app all we have to do
@@ -31,9 +32,10 @@ app.use((req, res, next)=>{
 
 //If you don't use next, the browser wont
 //continue so you can use something like below to force to maintenance page
-app.use((req, res, next)=>{
-res.render('maintenance.hbs')
-});
+    /*app.use((req, res, next)=>{
+    res.render('maintenance.hbs')
+    });
+    */
 
 //Setting up middlewear. This allows you configure how your express app works
 app.use(express.static(__dirname + '/public'));
@@ -94,6 +96,6 @@ res.send({errorMessage:'Unable to complete request'});
 //we need this to bind the application to a port on our machine. Without this
 //The app will not run
 //This is a common port for developing locally
-app.listen(3000, ()=>{
-  console.log('server is up on port 3000');
+app.listen(port, ()=>{
+  console.log(`server is up on port ${port}`);
 });
