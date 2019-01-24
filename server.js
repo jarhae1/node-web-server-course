@@ -60,7 +60,7 @@ hbs.registerHelper('screamIt', (text)=>{
 //req: stores lots of information about the request coming in. header/body/method that was made
 //res: has a bunch of methods you have access to so you can respond to the http request however you want
 
-app.get('/', (req, res)=> {
+app.get('/home', (req, res)=> {
 //the .send method this will allow us to respond to the request sending some data back
 //they will see this as the body data
 
@@ -86,6 +86,25 @@ app.get('/about', (req, res)=> {
   //render allows you to render any templates you have with the current view engine
 res.render('about.hbs', {
   pageTitle:'About Page'
+});
+})
+
+app.get('/', (req, res)=> {
+  //render allows you to render any templates you have with the current view engine
+res.render('index.hbs',{
+  nav:{
+    home:['#home','Home'],
+    about:['#about','About'],
+    service:['#business','Service'],
+    portfolio:['#product','Portfolio'],
+    team:['#team','Team'],
+    contact:['#contact','Contact'],
+  },
+  header:{
+    header1:'Welcome to Cannon',
+    header2:'We are the state of the art Weather Provider',
+    header3:'We provide weather solutions across the globe'
+  }
 });
 })
 

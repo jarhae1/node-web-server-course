@@ -11,15 +11,50 @@
     width: 100%;
     height: 350px;
 }
+
+#top-hero{
+  /*background-image: url('{{headerImg}}');*/
+  background-image: url('assets/images/business-bg.jpg');
+  background-size:cover;
+  color:white;
+  padding:40px;
+  margin-bottom:20px;
+}
+
+#navbar-header{
+  padding:8px 40px;
+}
+
+
+
 </style>
   <title>{{pageTitle}}</title>
 </head>
 <body>
 
-<div style="background-image: url('{{headerImg}}'); background-size:cover; margin-bottom:30px; color:white; padding:40px;" class="hero">
+  <header class="navbar" id="navbar-header">
+  <section class="navbar-section">
+    <a href="/" class="navbar-brand mr-2">Home</a>
+    <a href="/projects" class="btn btn-link">Projects</a>
+    <a href="/about" class="btn btn-link">About</a>
+  </section>
+  <section class="navbar-section">
+    <div class="input-group input-inline">
+      <input class="form-input" type="text" placeholder="search">
+      <button class="btn btn-primary input-group-btn">Search</button>
+    </div>
+  </section>
+</header>
+
+<div id = 'top-hero' class="hero">
   {{> header}}
   <p>{{screamIt welcomeMessage}}</p>
+
+
 </div>
+
+
+
 
 <div class="columns col-oneline">
         <div class="card col-5 col-mx-auto">
@@ -44,7 +79,7 @@
         </div>
         </div>
 
-        <div class="card col-7 col-mx-auto">
+        <div class="card col-5 col-mx-auto">
         <div class="card-image">
         <img src="{{profilePic}}" class="img-responsive">
         </div>
