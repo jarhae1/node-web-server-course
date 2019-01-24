@@ -89,6 +89,27 @@ res.render('about.hbs', {
 });
 })
 
+app.get('/projects', (req,res)=>{
+  res.render('projects.hbs', {
+    pageTitle:'Projects',
+    headerImg:'https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Revolution_-_1868_banner.jpg',
+    card1:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2000px-Node.js_logo.svg.png',
+    card1Header:'Node Projects',
+    card1SubHeader:'Node is Awesome',
+    card1Body:'This is the body',
+    card1Link1:['/','Home'],
+    card1Link2:['/about','About'],
+    card1Link3:['','Blank Button'],
+    card2:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2000px-Node.js_logo.svg.png',
+    card2Header:'Node Projects',
+    card2SubHeader:'Node is Awesome',
+    card2Body:'This is the body',
+    card2Link1:['/','Home'],
+    card2Link2:['/about','About'],
+    card2Link3:['','Blank Button']
+  })
+})
+
 app.get('/bad', (req, res)=> {
 res.send({errorMessage:'Unable to complete request'});
 })

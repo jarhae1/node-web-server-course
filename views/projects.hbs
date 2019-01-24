@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--https://picturepan2.github.io/spectre/layout/hero.html-->
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+ <style>
+ img.img-responsive {
+    width: 100%;
+    height: 350px;
+}
+</style>
+  <title>{{pageTitle}}</title>
+</head>
+<body>
+
+<div style="background-image: url('{{headerImg}}'); background-size:cover; margin-bottom:30px; color:white; padding:40px;" class="hero">
+  {{> header}}
+</div>
+
+<div class="columns col-oneline">
+        <div class="card col-5 col-mx-auto">
+        <div class="card-image">
+          <img src="{{card1}}" class="img-responsive" style="width:100%;">
+        </div>
+        <div class="card-header">
+          <div class="card-title h5">{{card1Header}}</div>
+          <div class="card-subtitle text-gray">{{card1SubHeader}}</div>
+        </div>
+        <div class="card-body">
+          <p>{{card1Body}}</p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" href="{{card1Link1.[0]}}">{{card1Link1.[1]}}</a>
+            <a class="btn btn-primary" href="{{card1Link2.[0]}}">{{card1Link2.[1]}}</a>
+            <a class="btn btn-primary" href="{{card1Link3.[0]}}">{{card1Link3.[1]}}</a>
+        </div>
+        </div>
+
+        <div class="card col-5 col-mx-auto">
+        <div class="card-image">
+          <img src="{{card2}}" class="img-responsive" style="width:100%;">
+        </div>
+        <div class="card-header">
+          <div class="card-title h5">{{card2Header}}</div>
+          <div class="card-subtitle text-gray">{{card2SubHeader}}</div>
+        </div>
+        <div class="card-body">
+          <p>{{card2Body}}</p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" href="{{card2Link1.[0]}}">{{card2Link1.[1]}}</a>
+            <a class="btn btn-primary" href="{{card2Link2.[0]}}">{{card2Link2.[1]}}</a>
+            <a class="btn btn-primary" href="{{card2Link3.[0]}}">{{card2Link3.[1]}}</a>
+        </div>
+        </div>
+
+
+</div>
+
+{{> footer}}
+</body>
+</html>
